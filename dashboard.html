@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<style>
+body{
+font-family:Poppins;
+background:#0f172a;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+max-width:400px;
+margin:auto;
+}
+
+.balance{
+font-size:35px;
+margin:20px 0;
+color:#38bdf8;
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:20px;
+background:#38bdf8;
+color:white;
+cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<h1>User Dashboard</h1>
+
+<div class="card">
+<h3>Your Balance</h3>
+<div class="balance" id="balance">৳ 0</div>
+<button onclick="addMoney()">Simulate Earning</button>
+</div>
+
+<script>
+let amount=0;
+function addMoney(){
+amount+=10;
+document.getElementById("balance").innerText="৳ "+amount;
+}
+</script>
+
+</body>
+</html>
