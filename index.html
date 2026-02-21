@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abedin Hard Team Community</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--bg:#0f172a;
+--card:#1e293b;
+--text:white;
+--accent:#38bdf8;
+}
+
+.light-mode{
+--bg:#f1f5f9;
+--card:white;
+--text:#0f172a;
+--accent:#2563eb;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+background:var(--bg);
+color:var(--text);
+overflow-x:hidden;
+transition:0.4s;
+}
+
+/* Loading Screen */
+#loader{
+position:fixed;
+width:100%;
+height:100vh;
+background:var(--bg);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:2000;
+}
+
+.loader-circle{
+width:50px;
+height:50px;
+border:5px solid var(--card);
+border-top:5px solid var(--accent);
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+100%{transform:rotate(360deg);}
+}
+
+/* Navbar */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:var(--card);
+}
+
+header h1{
+color:var(--accent);
+}
+
+nav a{
+margin:0 10px;
+text-decoration:none;
+color:var(--text);
+}
+
+.toggle-btn{
+cursor:pointer;
+background:var(--accent);
+padding:5px 12px;
+border-radius:20px;
+font-size:12px;
+color:white;
+}
+
+/* Hero */
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h2{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.btn{
+padding:10px 25px;
+background:var(--accent);
+color:white;
+border:none;
+border-radius:25px;
+cursor:pointer;
+text-decoration:none;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:var(--card);
+margin-top:50px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="loader">
+<div class="loader-circle"></div>
+</div>
+
+<header>
+<h1>Abedin Hard Team</h1>
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="admin.html">Admin</a>
+<span class="toggle-btn" onclick="toggleMode()">Toggle Mode</span>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Premium Earning Platform</h2>
+<p>Ultra Modern Community Experience</p>
+<a href="dashboard.html" class="btn">Enter Dashboard</a>
+</section>
+
+<footer>
+© 2026 Abedin Hard Team Community
+</footer>
+
+<script>
+window.onload=function(){
+document.getElementById("loader").style.display="none";
+}
+
+function toggleMode(){
+document.body.classList.toggle("light-mode");
+}
+</script>
+
+</body>
+</html>
